@@ -1,18 +1,16 @@
-# CodePath IOS PreWork
-Codepath IOS mobile development prework. A tip calculator that can split to bill between up to 5 people.
 # CodePath IOS PreWork - *Tipsy*
 
-**Name of your app** is a tip calculator application for iOS.
+**Tipsy** is a tip calculator application for iOS that can split the bill between up to 5 people.
 
-Submitted by: **Your Name Here**
+Submitted by: **Carson D. Johnson**
 
-Time spent: **X** hours spent in total
+Time spent: **4** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is complete:
 
-* [ ] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
+* [X] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
 * [ ] User can select between tip percentages by tapping different values on the segmented control and the tip value is updated accordingly
 
 The following **optional** features are implemented:
@@ -36,11 +34,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Getting help from forums is a little more difficult when programming with Swift than, for example, JavaScript or C# because the community is a bit smaller. Although, it takes a little longer to find answers I was able to figure out my problems when I combined the swift documentation along with forum posts.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2022] [Carson David Johnson]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
