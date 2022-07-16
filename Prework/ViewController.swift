@@ -36,7 +36,6 @@ class ViewController: UIViewController {
         }
         
         calculateTip((Any).self)
-        
     }
     
     @IBAction func calculateTip(_ sender: Any) {
@@ -61,8 +60,7 @@ class ViewController: UIViewController {
         let currencyFormatter = NumberFormatter()
         currencyFormatter.numberStyle = .currency
         currencyFormatter.minimumIntegerDigits = 1
-        currencyFormatter.maximumIntegerDigits = 2
-        currencyFormatter.maximumIntegerDigits = 1
+        currencyFormatter.maximumIntegerDigits = 3
         if(useLocalCurrency){
             currencyFormatter.locale = Locale.current
         } else {

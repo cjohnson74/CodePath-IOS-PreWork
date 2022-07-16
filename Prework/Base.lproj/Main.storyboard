@@ -156,7 +156,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" fixedFrame="YES" image="rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MfP-5i-0IH">
-                                <rect key="frame" x="-29" y="290" width="472" height="537"/>
+                                <rect key="frame" x="-29" y="289" width="472" height="537"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                             </imageView>
