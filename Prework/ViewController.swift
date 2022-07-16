@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         let currencyFormatter = NumberFormatter()
         currencyFormatter.numberStyle = .currency
         currencyFormatter.minimumIntegerDigits = 1
-        currencyFormatter.maximumIntegerDigits = 3
+        currencyFormatter.maximumIntegerDigits = 9
         if(useLocalCurrency){
             currencyFormatter.locale = Locale.current
         } else {
