@@ -21,9 +21,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Access UserDefaults
+        let userSettings = UserDefaults.standard
+        
+        // Sets user interface style based on default value of "darkMode" in userDefaults
+        if(userSettings.bool(forKey: "darkMode")){
+            overrideUserInterfaceStyle = .dark;
+        } else {
+            overrideUserInterfaceStyle = .light
+        }
+    }
+    
     @IBAction func calculateTip(_ sender: Any) {
         // Get bill amount from text field input
         let bill = Double(billAmountTextField.text!) ?? 0
