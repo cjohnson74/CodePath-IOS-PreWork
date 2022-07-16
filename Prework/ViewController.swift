@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +34,9 @@ class ViewController: UIViewController {
         } else {
             overrideUserInterfaceStyle = .light
         }
+        
+        calculateTip((Any).self)
+        
     }
     
     @IBAction func calculateTip(_ sender: Any) {
@@ -42,11 +44,30 @@ class ViewController: UIViewController {
         let bill = Double(billAmountTextField.text!) ?? 0
         
         // Percetage Number formatter
-        let numFormatter = NumberFormatter()
-        numFormatter.numberStyle = .percent
-        numFormatter.minimumIntegerDigits = 1
-        numFormatter.maximumIntegerDigits = 2
-        numFormatter.maximumFractionDigits = 1
+        let percentageFormatter = NumberFormatter()
+        percentageFormatter.numberStyle = .percent
+        percentageFormatter.minimumIntegerDigits = 1
+        percentageFormatter.maximumIntegerDigits = 2
+        percentageFormatter.maximumFractionDigits = 1
+        
+        // Access UserDefaults
+        let userSettings = UserDefaults.standard
+        
+        // Get values from user default settings
+        let useLocalCurrency = userSettings.bool(forKey: "useLocalCurrency")
+        let currencyType = userSettings.string(forKey: "iosLocale")
+        
+        // Getting currencyFormatter from the user default settings
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.minimumIntegerDigits = 1
+        currencyFormatter.maximumIntegerDigits = 2
+        currencyFormatter.maximumIntegerDigits = 1
+        if(useLocalCurrency){
+            currencyFormatter.locale = Locale.current
+        } else {
+            currencyFormatter.locale = Locale(identifier: currencyType ?? "en_US")
+        }
         
         // Get Total tip by multiplying tip * tipPercentage
         let tip = bill * Double(tipControl.value / 100)
@@ -65,9 +86,9 @@ class ViewController: UIViewController {
         let tipPP = tip / Double(numOfPeople)
         
         // Update Tip Percentage label
-        tipPercentage.text = numFormatter.string(for: Double(tipControl.value / 100))
+        tipPercentage.text = percentageFormatter.string(for: Double(tipControl.value / 100))
         // Update Tip Amount Label
-        tipAmountLabel.text = String(format: "$%.2f", tip)
+        tipAmountLabel.text = currencyFormatter.string(for: Double(tip))
         // Update Total Amount
         totalLabel.text = String(format: "$%.2f", total)
         // Update the total per person label
@@ -75,7 +96,8 @@ class ViewController: UIViewController {
         // Update the bill per person
         billPerPerson.text = String(format: "%.2f", billPP)
         // Update the tip per person
-        tipPerPerson.text = String(format: "%.2f", tipPP)    }
+        tipPerPerson.text = String(format: "%.2f", tipPP)
+    }
     
     @IBAction func changePersonCount(_ sender: UISegmentedControl) {
         // Get bill amount from text field input

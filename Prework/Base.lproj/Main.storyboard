@@ -206,6 +206,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0rK-e7-mBJ">
                                 <rect key="frame" x="347" y="138" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchUseLocal:" destination="mRj-OW-Hkw" eventType="valueChanged" id="91B-83-sPq"/>
+                                </connections>
                             </switch>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZF-CL-Ebk">
                                 <rect key="frame" x="0.0" y="302" width="414" height="162"/>
@@ -232,9 +235,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="37Y-NU-SJt"/>
                     <connections>
+                        <outlet property="currencyPicker" destination="vZF-CL-Ebk" id="ZCp-OA-mry"/>
                         <outlet property="darkModeSwitch" destination="ewd-CK-rQm" id="f01-Ui-Oaq"/>
                         <outlet property="localCurrSwitch" destination="0rK-e7-mBJ" id="IYz-0q-gTW"/>
-                        <outlet property="locationPicker" destination="vZF-CL-Ebk" id="Zjw-Po-85x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5Q-lZ-hJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
