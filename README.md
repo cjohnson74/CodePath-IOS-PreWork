@@ -29,9 +29,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<p align="center">
 https://user-images.githubusercontent.com/52815609/179382028-ca7ddd5c-ddb7-4ea4-8635-63a4b4fda56a.mp4
-</p>
 
 ## Notes
 
