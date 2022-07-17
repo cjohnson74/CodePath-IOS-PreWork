@@ -12,6 +12,10 @@ class SettingsViewController: UIViewController,  UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var localCurrSwitch: UISwitch!
     @IBOutlet weak var currencyPicker: UIPickerView!
     @IBOutlet weak var darkModeSwitch: UISwitch!
+    @IBOutlet weak var lightBulbOn: UIImageView!
+    @IBOutlet weak var lightBulbOff: UIImageView!
+    @IBOutlet weak var currLocationOn: UIImageView!
+    @IBOutlet weak var currLocationsOff: UIImageView!
     
     var currencyTypes: [String] = [String]()
     var iosLocales: [String] = [String]()
@@ -24,17 +28,25 @@ class SettingsViewController: UIViewController,  UIPickerViewDelegate, UIPickerV
         
         // Set dark mode switch and user interface style based on default key "darkMode"
         if(userSettings.bool(forKey: "darkMode")){
-            darkModeSwitch.isOn = true;
+            darkModeSwitch.isOn = true
             overrideUserInterfaceStyle = .dark;
+            lightBulbOn.isHidden = true
+            lightBulbOff.isHidden = false
         } else {
-            darkModeSwitch.isOn = false;
+            darkModeSwitch.isOn = false
             overrideUserInterfaceStyle = .light
+            lightBulbOn.isHidden = false
+            lightBulbOff.isHidden = true
         }
         if(userSettings.bool(forKey: "useLocalCurrency")){
-            localCurrSwitch.isOn = true;
+            localCurrSwitch.isOn = true
+            currLocationOn.isHidden = false
+            currLocationsOff.isHidden = true
         } else {
             localCurrSwitch.isOn = false;
             userSettings.set(currencyPicker.selectedRow(inComponent: 0), forKey: "currencyType")
+            currLocationOn.isHidden = true
+            currLocationsOff.isHidden = false
         }
         
         // Connect currencyTypes data
@@ -99,9 +111,13 @@ class SettingsViewController: UIViewController,  UIPickerViewDelegate, UIPickerV
         if(sender.isOn){
             userSettings.set(true, forKey: "darkMode")
             overrideUserInterfaceStyle = .dark
+            lightBulbOn.isHidden = true
+            lightBulbOff.isHidden = false
         } else {
             userSettings.set(false, forKey: "darkMode")
             overrideUserInterfaceStyle = .light
+            lightBulbOn.isHidden = false
+            lightBulbOff.isHidden = true
         }
         
         // Force UserDefaults to save
@@ -121,8 +137,12 @@ class SettingsViewController: UIViewController,  UIPickerViewDelegate, UIPickerV
         // This sets a value to determine if current location currency will be used by default
         if(sender.isOn){
             userSettings.set(true, forKey: "useLocalCurrency")
+            currLocationOn.isHidden = false
+            currLocationsOff.isHidden = true
         } else {
             userSettings.set(false, forKey: "useLocalCurrency")
+            currLocationOn.isHidden = true
+            currLocationsOff.isHidden = false
         }
         
         // Force UserDefaults to save

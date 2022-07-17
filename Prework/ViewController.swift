@@ -88,13 +88,13 @@ class ViewController: UIViewController {
         // Update Tip Amount Label
         tipAmountLabel.text = currencyFormatter.string(for: Double(tip))
         // Update Total Amount
-        totalLabel.text = String(format: "$%.2f", total)
+        totalLabel.text = currencyFormatter.string(for: Double(total))
         // Update the total per person label
-        totalPerPerson.text = String(format: "%.2f", totalPP)
+        totalPerPerson.text = currencyFormatter.string(for: Double(totalPP))
         // Update the bill per person
-        billPerPerson.text = String(format: "%.2f", billPP)
+        billPerPerson.text = currencyFormatter.string(for: Double(billPP))
         // Update the tip per person
-        tipPerPerson.text = String(format: "%.2f", tipPP)
+        tipPerPerson.text = currencyFormatter.string(for: Double(tipPP))
     }
     
     @IBAction func changePersonCount(_ sender: UISegmentedControl) {
@@ -117,12 +117,30 @@ class ViewController: UIViewController {
         // Calculate tip per person
         let tipPP = tip / Double(numOfPeople)
         
+        // Access UserDefaults
+        let userSettings = UserDefaults.standard
+        
+        // Get values from user default settings
+        let useLocalCurrency = userSettings.bool(forKey: "useLocalCurrency")
+        let currencyType = userSettings.string(forKey: "iosLocale")
+        
+        // Getting currencyFormatter from the user default settings
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.minimumIntegerDigits = 1
+        currencyFormatter.maximumIntegerDigits = 9
+        if(useLocalCurrency){
+            currencyFormatter.locale = Locale.current
+        } else {
+            currencyFormatter.locale = Locale(identifier: currencyType ?? "en_US")
+        }
+        
         // Update the total per person label
-        totalPerPerson.text = String(format: "%.2f", totalPP)
+        totalPerPerson.text = currencyFormatter.string(for: Double(totalPP))
         // Update the bill per person
-        billPerPerson.text = String(format: "%.2f", billPP)
+        billPerPerson.text = currencyFormatter.string(for: Double(billPP))
         // Update the tip per person
-        tipPerPerson.text = String(format: "%.2f", tipPP)
+        tipPerPerson.text = currencyFormatter.string(for: Double(tipPP))
     }
 }
 

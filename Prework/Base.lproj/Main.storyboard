@@ -156,7 +156,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" fixedFrame="YES" image="rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MfP-5i-0IH">
-                                <rect key="frame" x="-29" y="288" width="472" height="537"/>
+                                <rect key="frame" x="-29" y="289" width="472" height="537"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                             </imageView>
@@ -229,20 +229,44 @@
                                     <action selector="darkMode:" destination="mRj-OW-Hkw" eventType="valueChanged" id="n7q-wk-iTF"/>
                                 </connections>
                             </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="lightbulb" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="reS-pP-9XD">
+                                <rect key="frame" x="311" y="544.5" width="47" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="lightbulb.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AVR-Ce-t1J">
+                                <rect key="frame" x="305" y="548.5" width="60" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="location.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Z3I-Qu-SnL">
+                                <rect key="frame" x="287" y="132" width="46" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleAspectFit" fixedFrame="YES" image="location.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JLo-do-wmH">
+                                <rect key="frame" x="287" y="132" width="45" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0dK-5k-Qd9"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="37Y-NU-SJt"/>
                     <connections>
+                        <outlet property="currLocationOn" destination="Z3I-Qu-SnL" id="zQI-St-A9q"/>
+                        <outlet property="currLocationsOff" destination="JLo-do-wmH" id="1LF-SP-K4u"/>
                         <outlet property="currencyPicker" destination="vZF-CL-Ebk" id="ZCp-OA-mry"/>
                         <outlet property="darkModeSwitch" destination="ewd-CK-rQm" id="f01-Ui-Oaq"/>
+                        <outlet property="lightBulbOff" destination="AVR-Ce-t1J" id="mCP-MZ-hPd"/>
+                        <outlet property="lightBulbOn" destination="reS-pP-9XD" id="NuG-5U-yXT"/>
                         <outlet property="localCurrSwitch" destination="0rK-e7-mBJ" id="IYz-0q-gTW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5Q-lZ-hJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2031" y="116"/>
+            <point key="canvasLocation" x="2030.4347826086957" y="115.84821428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qw8-4q-DVR">
@@ -265,7 +289,14 @@
     </scenes>
     <resources>
         <image name="circlebadge" catalog="system" width="128" height="120"/>
+        <image name="lightbulb" catalog="system" width="113" height="128"/>
+        <image name="lightbulb.slash" catalog="system" width="113" height="128"/>
+        <image name="location.fill" catalog="system" width="128" height="121"/>
+        <image name="location.slash" catalog="system" width="128" height="118"/>
         <image name="rectangle.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
