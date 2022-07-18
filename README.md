@@ -4,7 +4,7 @@
 
 Submitted by: **Carson D. Johnson**
 
-Time spent: **4** hours spent in total
+Time spent: **8** hours spent in total
 
 ## User Stories
 
@@ -23,6 +23,8 @@ The following **additional** features are implemented:
 
 - [X] When spliting the total value the total per person, tip per person, and bill per person is divided and shown.
 - [X] Added dark mode feature in settings view
+
+![1024](https://user-images.githubusercontent.com/52815609/179438241-f615df7a-6aef-439d-9da1-1a25bd9f9994.png)
 
 ## Video Walkthrough
 
