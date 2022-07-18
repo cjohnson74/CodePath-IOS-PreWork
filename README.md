@@ -25,7 +25,7 @@ The following **additional** features are implemented:
 - [X] Added dark mode feature in settings view
 
 <p align="center">
-![256](https://user-images.githubusercontent.com/52815609/179438338-f299b44e-f14d-4e28-a6f0-f657310d1684.png)
+![Tipsy App Icon](https://user-images.githubusercontent.com/52815609/179438338-f299b44e-f14d-4e28-a6f0-f657310d1684.png)
 </p>
 
 ## Video Walkthrough
