@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE230C0B2880C9F200DE1FE7 /* Prework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE230C0B2880C9F200DE1FE7 /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE230C0E2880C9F200DE1FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE230C102880C9F200DE1FE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BE230C122880C9F200DE1FE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		BE230C0C2880C9F200DE1FE7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE230C0B2880C9F200DE1FE7 /* Prework.app */,
+				BE230C0B2880C9F200DE1FE7 /* Tipsy.app */,
 				BE230C212880C9F300DE1FE7 /* PreworkTests.xctest */,
 				BE230C2B2880C9F400DE1FE7 /* PreworkUITests.xctest */,
 			);
@@ -133,9 +133,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE230C0A2880C9F200DE1FE7 /* Prework */ = {
+		BE230C0A2880C9F200DE1FE7 /* Tipsy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE230C352880C9F400DE1FE7 /* Build configuration list for PBXNativeTarget "Prework" */;
+			buildConfigurationList = BE230C352880C9F400DE1FE7 /* Build configuration list for PBXNativeTarget "Tipsy" */;
 			buildPhases = (
 				BE230C072880C9F200DE1FE7 /* Sources */,
 				BE230C082880C9F200DE1FE7 /* Frameworks */,
@@ -145,9 +145,9 @@
 			);
 			dependencies = (
 			);
-			name = Prework;
+			name = Tipsy;
 			productName = Prework;
-			productReference = BE230C0B2880C9F200DE1FE7 /* Prework.app */;
+			productReference = BE230C0B2880C9F200DE1FE7 /* Tipsy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BE230C202880C9F300DE1FE7 /* PreworkTests */ = {
@@ -222,7 +222,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE230C0A2880C9F200DE1FE7 /* Prework */,
+				BE230C0A2880C9F200DE1FE7 /* Tipsy */,
 				BE230C202880C9F300DE1FE7 /* PreworkTests */,
 				BE230C2A2880C9F400DE1FE7 /* PreworkUITests */,
 			);
@@ -290,12 +290,12 @@
 /* Begin PBXTargetDependency section */
 		BE230C232880C9F300DE1FE7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BE230C0A2880C9F200DE1FE7 /* Prework */;
+			target = BE230C0A2880C9F200DE1FE7 /* Tipsy */;
 			targetProxy = BE230C222880C9F300DE1FE7 /* PBXContainerItemProxy */;
 		};
 		BE230C2D2880C9F400DE1FE7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BE230C0A2880C9F200DE1FE7 /* Prework */;
+			target = BE230C0A2880C9F200DE1FE7 /* Tipsy */;
 			targetProxy = BE230C2C2880C9F400DE1FE7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -443,6 +443,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H79ALCXX5Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Prework/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -455,7 +456,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = memo.com.Prework;
+				PRODUCT_BUNDLE_IDENTIFIER = memos.coms.Prework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -470,6 +471,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H79ALCXX5Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Prework/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -482,7 +484,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = memo.com.Prework;
+				PRODUCT_BUNDLE_IDENTIFIER = memos.coms.Prework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -574,7 +576,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE230C352880C9F400DE1FE7 /* Build configuration list for PBXNativeTarget "Prework" */ = {
+		BE230C352880C9F400DE1FE7 /* Build configuration list for PBXNativeTarget "Tipsy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE230C362880C9F400DE1FE7 /* Debug */,
