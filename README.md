@@ -24,7 +24,7 @@ The following **additional** features are implemented:
 - [X] When spliting the total value the total per person, tip per person, and bill per person is divided and shown.
 - [X] Added dark mode feature in settings view
 
-![512](https://user-images.githubusercontent.com/52815609/179438280-26a9ed6b-4805-4850-ae40-e57c4d9ae5be.png)
+![256](https://user-images.githubusercontent.com/52815609/179438338-f299b44e-f14d-4e28-a6f0-f657310d1684.png)
 
 ## Video Walkthrough
 
