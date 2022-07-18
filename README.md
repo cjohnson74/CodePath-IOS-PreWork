@@ -24,13 +24,19 @@ The following **additional** features are implemented:
 - [X] When spliting the total value the total per person, tip per person, and bill per person is divided and shown.
 - [X] Added dark mode feature in settings view
 
-![Tipsy App Icon](https://user-images.githubusercontent.com/52815609/179438338-f299b44e-f14d-4e28-a6f0-f657310d1684.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/52815609/179438338-f299b44e-f14d-4e28-a6f0-f657310d1684.png" />
+</p>
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
 https://user-images.githubusercontent.com/52815609/179385039-72e73ba1-7c0c-412d-b70c-a2bc7021303e.mp4
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/52815609/179385039-72e73ba1-7c0c-412d-b70c-a2bc7021303e.mp4" />
+</p>
 
 ## Notes
 
