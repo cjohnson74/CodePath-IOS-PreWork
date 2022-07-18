@@ -32,9 +32,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/52815609/179385039-72e73ba1-7c0c-412d-b70c-a2bc7021303e.mp4" />
-</p>
+https://user-images.githubusercontent.com/52815609/179385039-72e73ba1-7c0c-412d-b70c-a2bc7021303e.mp4
 
 ## Notes
 
